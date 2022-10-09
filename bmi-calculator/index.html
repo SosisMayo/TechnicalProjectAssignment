@@ -5,16 +5,23 @@
     <script src="script.js" defer></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
     <title>BMI Calculator</title>
 </head>
 <body>
-    <form onsubmit="return false">
-        <label for="berat-badan">Masukkan Berat Badan (KG)</label>
-        <input type="text" name="berat-badan" id="bb" placeholder="Berat Badan">
-        <label for="tinggi-badan">Masukkan Tinggi Badan (CM)</label>
-        <input type="text" name="tinggi-badan" id="tb" placeholder="Tinggi Badan">
-        <button id="btn-sub">Hitung</button>
-    </form>
-    <p id="out"></p>
+    <div class="container">
+        <h1 class="judul">Cek Hasil BMI Kamu !</h1>
+        <p>Masukkan Berat Badan dan Tinggi Badan Kamu</p>
+        <form onsubmit="return false">
+            <label for="berat-badan">Masukkan Berat Badan (KG)</label>
+            <input type="text" name="berat-badan" id="bb" placeholder="Berat Badan">
+            <label for="tinggi-badan">Masukkan Tinggi Badan (CM)</label>
+            <input type="text" name="tinggi-badan" id="tb" placeholder="Tinggi Badan">
+            <button id="btn-sub">Hitung</button>
+        </form>
+        <div id="out"></div>
+    </div>
+    
 </body>
 </html>

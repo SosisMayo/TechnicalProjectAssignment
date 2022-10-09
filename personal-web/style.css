@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+header p{
+    display: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+}
+
+header a{
+    color: #000;
+}
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    align-items: center;
+}
+
+nav {
+    width: 40%;
+    background-color: red;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    transition: all 500ms;
+}
+
+nav ul li a{
+    color: #fff;
+}
+
+nav ul li a:hover{
+    color: #000;
+}
+
+nav .toggle{
+    display: none;
+}
+
+#hero .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 50px;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+
+#hero .container h1{
+    font-size: 100px;
+    word-spacing: 1000px;
+    color: #000;
+}
+
+#hero .logo{
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px){
+    nav{
+        width: 50%;
+    }
+
+    #hero .container{
+        padding-bottom: 150px;
+    }
+
+    #hero .logo{
+        margin-top: 20px;
+    }
+
+    #hero .container h1{
+        font-size: 75px;
+        word-spacing: 400px;
+    }
+}
+
+@media  screen and (max-width: 576px){
+    header h1{
+        display: none;
+    }
+
+    header p{
+        display: block;
+    }
+
+    #btn-toggle{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        opacity: 0;
+        translate: -2px -1px;
+        z-index: 999;
+        cursor: pointer;
+    }
+
+    nav ul {
+        position: absolute;
+        flex-direction: column;
+        background-color: brown;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 320px;
+        z-index: 0;
+        transform: translateX(100%);
+    }
+
+    nav .slide{
+        transform: translateX(0);
+    }
+
+    nav .toggle{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+    }
+
+    nav .toggle span{
+        display: block;
+        width: 30px;
+        height: 5px;
+        background: #fff;
+        margin: 2px;
+        border-radius: 3px;
+        transition: 500ms;
+    }
+
+    nav .toggle span:nth-child(2){
+        transform-origin: 0 0 ;
+     }
+ 
+     nav .toggle span:nth-child(4){
+         transform-origin: 0 100% ;
+     }
+
+    /* Animasi check box */
+    #btn-toggle:checked ~ span:nth-child(2){
+        background-color: white;
+        transform: rotate(45deg) translate(-1px, -1px);
+    }
+
+    #btn-toggle:checked ~ span:nth-child(4){
+        background-color: white;
+        transform: rotate(-45deg);
+    }
+
+    #btn-toggle:checked ~ span:nth-child(3){
+        transform: scale(0);
+    }
+
+    .hero-text p {
+        display: none;
+    }
+
+    #hero .container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-bottom: 100px;
+        padding-left: 25px;
+        height: 100vh;
+        background-color: bisque;
+    }
+
+    #hero .container h1{
+        font-size: 80px;
+        word-spacing: 100px;
+    }
+
+    
+
+}
