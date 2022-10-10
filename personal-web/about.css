@@ -1,3 +1,12 @@
+body{
+    color: var(--text-hitam);
+}
+
+#about h1{
+    color : var(--biru);
+    margin-bottom: 10px;
+}
+
 #about .container{
     display: flex;
     height: 100vh;
@@ -10,15 +19,27 @@
     text-align: justify;
 }
 
+.container p {
+    margin-top: 20px;
+    line-height: 1.5em;
+}
 
+body{
+    overflow: hidden;
+}
 
 @media screen and (min-width: 768px){
     #about .container h1{
-        font-size: 50px;
+        font-size: 40px;
     }
     
     #about .container p{
         font-size: 20px;
+    }
+
+    #about .container{
+        width: 80%;
+        margin: 0 auto;
     }
 }
 

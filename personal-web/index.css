@@ -1,0 +1,32 @@
+body{
+    overflow: hidden;
+}
+
+#hero .container{
+    background-color: var(--text-putih);
+}
+
+#hero .container h1 span:hover{
+    color: var(--biru);
+    transition: all 500ms ease-out;
+}
+
+#hero .container h3 span{
+    color: var(--biru);
+}
+
+.logo-brand{
+    width: 24px;
+    height: 24px;
+    color: var(--text-hitam);
+}
+
+.logo{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.logo-brand:hover{
+    color: var(--biru);
+}

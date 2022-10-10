@@ -1,0 +1,87 @@
+body{
+    color : var(--text-hitam)
+}
+
+a{
+    color : var(--biru)
+}
+
+span{
+    font-size: 1.5em;
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    justify-content: center;
+}
+
+#content h1{
+    margin-bottom: 15px;
+}
+
+#content h4{
+    margin-bottom: 15px;
+}
+
+
+.text{
+    margin-bottom: 0.5rem;
+    font-size: 1.5em;
+}
+
+.btn{
+    width : 300px;
+    height: 50px;
+    border : none;
+    border-radius: 10px;
+    background: rgb(58,191,167);
+background: linear-gradient(326deg, rgba(58,191,167,1) 6%, rgba(58,126,191,1) 69%, rgba(26,120,210,1) 76%);
+}
+
+.btn h3{
+    color: var(--text-putih);
+    font-size: 2em;
+    font-weight: bold;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 768px){
+    .text{
+        font-size: 1.2em;
+    }
+
+    .btn h3{
+        font-size: 2em;
+
+    }
+}
+
+@media screen and (max-width: 576px){
+    header h1{
+        display: block;
+    }
+
+    header p{
+        display: none;
+    }
+
+    .text{
+        font-size: 0.9em;
+    }
+
+    .btn{
+        width : 150px;
+        height: 50px;
+    }
+
+    .btn h3{
+        font-size: 1.2em;
+    }
+
+    body{
+        overflow: hidden;
+    }
+}

@@ -1,3 +1,11 @@
+/*Variable*/
+:root{
+    --text-hitam : rgb(45,55,72);
+    --text-putih : rgb(255,255,255);
+    --biru : rgb(58,126,191);
+}
+
+
 *{
     margin: 0;
     padding: 0;
@@ -18,11 +26,10 @@ a{
 
 body{
     font-family: 'Poppins', sans-serif;
-    background: #f5f5f5;
 }
 
 header a{
-    color: #000;
+    color: var(--text-hitam);
 }
 
 header{
@@ -34,7 +41,6 @@ header{
 
 nav {
     width: 40%;
-    background-color: red;
 }
 
 nav ul{
@@ -45,11 +51,14 @@ nav ul{
 }
 
 nav ul li a{
-    color: #fff;
+    color: var(--text-hitam);
+    transition: all 200ms;
 }
 
 nav ul li a:hover{
-    color: #000;
+    color: var(--biru);
+    padding-top: 5px;
+    border-top: 3px solid var(--biru);
 }
 
 nav .toggle{
@@ -61,7 +70,7 @@ nav .toggle{
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: 50px;
+    padding-left: 12%;
     height: 100vh;
     padding-bottom: 100px;
 }
@@ -69,17 +78,31 @@ nav .toggle{
 #hero .container h1{
     font-size: 100px;
     word-spacing: 1000px;
-    color: #000;
+    color: var(--text-hitam)
+}
+
+#hero .container p{
+    color: var(--text-hitam);
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+#hero .container h3{
+    margin-left: 5px;
 }
 
 #hero .logo{
-    background-color: #000;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 50%;
     margin-top: 20px;
 }
+
+input{
+    display: none;
+}
+
 
 @media screen and (max-width: 768px){
     nav{
@@ -88,6 +111,7 @@ nav .toggle{
 
     #hero .container{
         padding-bottom: 150px;
+        padding-left: 10%;
     }
 
     #hero .logo{
@@ -98,9 +122,18 @@ nav .toggle{
         font-size: 75px;
         word-spacing: 400px;
     }
+
+    input{
+        display: none;
+    }
+
 }
 
 @media  screen and (max-width: 576px){
+    input{
+        display: block;
+    }
+
     header h1{
         display: none;
     }
@@ -122,13 +155,17 @@ nav .toggle{
     nav ul {
         position: absolute;
         flex-direction: column;
-        background-color: brown;
+        background-color: rgb(228, 224, 224);
         height: 100vh;
         align-items: center;
         justify-content: space-evenly;
         width: 320px;
         z-index: 0;
         transform: translateX(100%);
+    }
+
+    nav ul li a{
+        font-size: 1.5em;
     }
 
     nav .slide{
@@ -147,7 +184,7 @@ nav .toggle{
         display: block;
         width: 30px;
         height: 5px;
-        background: #fff;
+        background: var(--text-hitam);
         margin: 2px;
         border-radius: 3px;
         transition: 500ms;
@@ -163,12 +200,12 @@ nav .toggle{
 
     /* Animasi check box */
     #btn-toggle:checked ~ span:nth-child(2){
-        background-color: white;
+        background-color: var(--text-hitam);
         transform: rotate(45deg) translate(-1px, -1px);
     }
 
     #btn-toggle:checked ~ span:nth-child(4){
-        background-color: white;
+        background-color: var(--text-hitam);
         transform: rotate(-45deg);
     }
 
@@ -188,14 +225,11 @@ nav .toggle{
         padding-bottom: 100px;
         padding-left: 25px;
         height: 100vh;
-        background-color: bisque;
     }
 
     #hero .container h1{
         font-size: 80px;
-        word-spacing: 100px;
-    }
-
-    
+        word-spacing: 500px;
+    } 
 
 }
