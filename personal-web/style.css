@@ -12,7 +12,11 @@
     box-sizing: border-box;
 }
 
-body{
+html,body{
+    overflow-x: hidden;
+}
+
+.wrapper{
     overflow-x: hidden;
 }
 
@@ -130,6 +134,10 @@ input{
 }
 
 @media  screen and (max-width: 576px){
+    html,body{
+        overflow-x: hidden;
+    }
+
     input{
         display: block;
     }
@@ -228,8 +236,12 @@ input{
     }
 
     #hero .container h1{
-        font-size: 80px;
+        font-size: 2em;
         word-spacing: 500px;
     } 
+
+    .wrapper{
+        overflow-x: hidden;
+    }
 
 }

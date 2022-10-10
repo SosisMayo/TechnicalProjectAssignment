@@ -30,3 +30,8 @@ body{
 .logo-brand:hover{
     color: var(--biru);
 }
+
+html,body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
