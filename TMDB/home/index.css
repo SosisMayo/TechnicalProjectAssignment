@@ -16,16 +16,10 @@ header{
     justify-content: space-between;
     padding-left: 1em;
     padding-right: 1em;
-    border: 1px solid red;
-}
-
-.logo{
-    border: 1px solid red;
 }
 
 nav{
     padding: 1em;
-    border: 1px solid red;
 }
 
 .tulisan{
@@ -36,7 +30,6 @@ nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: 1px solid red;
     padding-top: 1em;
     padding-bottom: 1em;
     padding-left: 20%;
@@ -47,16 +40,20 @@ nav{
 .film-item{
     display: flex;
     flex-direction: column;
-    border: 1px solid red;
+    background-color: #b3f5b3;
     max-width: 225px;
-    margin : 1em
+    margin : 1em;
+    border-radius: 10px;
+    padding : 0.5em;
 }
 
 .poster-film{
     width: fit-content;
 }
-.film-item .description-film{
-    border: 1px solid red;
+
+.poster-film img{
+
+    border-radius: 10px;
 }
 
 .film-item .description-film .title-film{
@@ -79,7 +76,6 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border: 1px solid red;
     padding: 1em;
 }
 
@@ -101,20 +97,13 @@ nav{
     margin: 0.5em;
 }
 
-.angka-pertama{
-    border-bottom: 1px solid red;
-}
-
-.angka-kedua:hover{
-    border-bottom: 1px solid red;
-}
-
-.angka-kedua:hover ~ a{
-    border-bottom: none;
-}
 
 .titik{
     display: none;
+}
+
+.active{
+    border-bottom: 2px solid green;
 }
 
 /* Media Query*/

@@ -34,7 +34,6 @@ const searchFilm = async () => {
     }else{
         makeCardSearch();
         document.querySelector(".page-control").style.display = "none";
-
     }
 }
 
@@ -76,26 +75,44 @@ const nextPageHandler = async () => {
         page++;
         await makeCard();
         updateHalaman();
+        currentPageHandler();
 
     }
     else{
         page = 1;
         await makeCard();
         updateHalaman();
+        currentPageHandler();
     }
 }
 
 const previousPageHandler = async () => {
     if (page === 1){
         page = 99;
-        console.log(page);
         await makeCard();
         updateHalaman();
+        currentPageHandler();
     }
     else{
         page--;
         await makeCard();
         updateHalaman();
+        currentPageHandler();
+    }
+}
+
+const currentPageHandler = () => {
+    if (page == 1){
+        angka.children[0].classList.add('active');
+        console.log (angka.children[0]);
+    }
+    for(let i= 0;i<angka.children.length;i++){
+        if(page == angka.children[i].textContent){
+            angka.children[i].classList.add("active");
+        }
+        else{
+            angka.children[i].classList.remove("active");
+        }
     }
 }
 
