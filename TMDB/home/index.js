@@ -19,10 +19,10 @@ const discoverFilm = async () => {
 }
 
 const searchFilm = async () => {
-    const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=2d9decd98bb8289f2a7d3c030315fcb1&language=en-US&query=${query}&page=${page}&include_adult=false`);
+    page = 1;
+    const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=2d9decd98bb8289f2a7d3c030315fcb1&language=en-US&query=${query}&page=${page}&sort_by=popularity.desc&include_adult=false`);
     const raw = await response.json();
     dataSearch = raw.results;
-    console.log(data);
     while(containerFilm.firstChild){
         containerFilm.removeChild(containerFilm.firstChild);
     }
@@ -33,6 +33,8 @@ const searchFilm = async () => {
         containerFilm.appendChild(noResult);
     }else{
         makeCardSearch();
+        document.querySelector(".page-control").style.display = "none";
+
     }
 }
 

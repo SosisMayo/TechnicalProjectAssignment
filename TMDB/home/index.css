@@ -28,6 +28,10 @@ nav{
     border: 1px solid red;
 }
 
+.tulisan{
+    padding-left: 1em;
+}
+
 .container-film{
     display: flex;
     flex-wrap: wrap;
@@ -35,6 +39,8 @@ nav{
     border: 1px solid red;
     padding-top: 1em;
     padding-bottom: 1em;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 /* Card Film */
@@ -109,4 +115,12 @@ nav{
 
 .titik{
     display: none;
+}
+
+/* Media Query*/
+@media screen and (max-width: 768px){
+    .container-film{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
