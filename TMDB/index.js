@@ -6,6 +6,7 @@ const angkaKedua = document.querySelector('.angka-kedua');
 const angkaKetiga = document.querySelector('.angka-ketiga');
 const angkaKeempat = document.querySelector('.angka-keempat');
 const angka = document.querySelector('.angka');
+const searchText = document.querySelector('.search-text');
 let page = 1;
 let data;
 let dataSearch;
@@ -38,6 +39,10 @@ const searchFilm = async () => {
 }
 
 const makeCardSearch = async () => {
+    const judul = document.createElement('h1');
+    judul.textContent = `Search Result for ${query}`;
+    searchText.appendChild(judul);
+    document.querySelector(".tulisan").style.display = "none";
     containerFilm.innerHTML = dataSearch.map(film => {
         return `
         <div class="film-item">

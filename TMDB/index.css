@@ -106,6 +106,10 @@ nav{
     border-bottom: 2px solid green;
 }
 
+.search-text{
+    padding: 1em;
+}
+
 /* Media Query*/
 @media screen and (max-width: 768px){
     .container-film{
