@@ -4,18 +4,11 @@ body{
     padding: 0;
 }
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
 /* Header */
 header{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding-left: 1em;
-    padding-right: 1em;
+    justify-content: space-evenly;
     border: 1px solid red;
 }
 
@@ -24,7 +17,6 @@ header{
 }
 
 nav{
-    padding: 1em;
     border: 1px solid red;
 }
 
@@ -68,45 +60,3 @@ nav{
     font-size: 0.8em;
 }
 
-
-.page-control{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: 1px solid red;
-    padding: 1em;
-}
-
-.page-control .next-page{
-   width: 24px;
-}
-
-.page-control .previous-page{
-    width: 24px;
-}
-
-.angka{
-    display: flex;
-    align-items: center;
-}
-
-
-.angka a{
-    margin: 0.5em;
-}
-
-.angka-pertama{
-    border-bottom: 1px solid red;
-}
-
-.angka-kedua:hover{
-    border-bottom: 1px solid red;
-}
-
-.angka-kedua:hover ~ a{
-    border-bottom: none;
-}
-
-.titik{
-    display: none;
-}
